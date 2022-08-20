@@ -1,7 +1,6 @@
 import React from "react"
-import Image from "next/image"
 import { FaEthereum } from "react-icons/fa"
-import ape from "../assets/redfur.jpg"
+
 const styles = {
     collectionCard: `cursor-pointer w-60 bg-[#1f2937] rounded-[20px] border-2 border-black	m-3 overflow-hidden border border-white`,
     collectionCardImage: ``,

@@ -15,9 +15,6 @@ export default function Home() {
             const openseaData = await axios.get(
                 "https://testnets-api.opensea.io/api/v1/assets?asset_contract_address=0xf888D486EB686ECcb44ff354D8B2cB5388bcf25C&order_direction=asc&offset=0&limit=20&include_orders=false"
             )
-            console.log(`The data pulled: ${openseaData.data.assets}`)
-            setApeListData(openseaData.data.assets)
-            console.log(`Apelist Data: ${apeListData}`)
         }
         return getMyNfts
     }, [])

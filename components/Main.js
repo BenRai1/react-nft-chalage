@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react"
-import picture from "../assets/redfur.jpg"
-import Image from "next/image"
 import { BsInstagram } from "react-icons/bs"
 import { FiTwitter } from "react-icons/fi"
 import { TbDots } from "react-icons/tb"
@@ -26,16 +24,11 @@ const styles = {
 
 export default function Main({ selectedApe, apeListData }) {
     const [activeApe, setActiveApe] = useState(apeListData[0])
-    console.log("Selected Ape Id:")
-    console.log(selectedApe)
     console.log("Ape List Data:")
     console.log(apeListData)
 
     useEffect(() => {
         setActiveApe(apeListData[selectedApe])
-
-        console.log("Active Ape:")
-        console.log(activeApe)
     }, [selectedApe, apeListData])
     return (
         <div className={styles.main}>
@@ -57,7 +50,7 @@ export default function Main({ selectedApe, apeListData }) {
                         </div>
                         <div>
                             <div className={styles.walletAddress}>{activeApe.owner.address}</div>
-                            <div className={styles.owner}>@benburger</div>
+                            <div className={styles.owner}>{activeApe.owner.user.username}</div>
                         </div>
                     </div>
                 </div>
