@@ -1,12 +1,12 @@
 import React from "react"
 import Image from "next/image"
 import logo from "../assets/logo.png"
-import { AiFillExperiment } from "react-icons/ai"
+import { BiTargetLock } from "react-icons/bi"
 import { BsSun } from "react-icons/bs"
 import axios from "axios"
 
 const styles = {
-    header: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
+    header: `bg-black w-screen px-[1.2rem] py-[0.8rem] flex `,
     logoContainer: `flex items-center cursor-pointer`,
     headerText: ` ml-[0.8rem] text-white font-semibold text-2xl`,
     searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <div className={styles.searchBar}>
                 <div className={styles.searchIcon}>
-                    <AiFillExperiment />
+                    <BiTargetLock />
                 </div>
                 <input
                     type="text"
